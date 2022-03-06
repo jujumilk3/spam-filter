@@ -13,12 +13,12 @@ class SpamFilter(BaseModel):
     depth: int
 
 
-@app.get("/")
+@app.get('/')
 async def root():
-    return {"message": "Hello World"}
+    return {'message': "Hello World"}
 
 
-@app.post("/spam-filter")
+@app.post('/spam-filter', response_model=bool)
 async def spam_filter(
     request_body: SpamFilter
 ):
