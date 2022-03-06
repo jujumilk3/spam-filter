@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "0cf638bc-55f1-4cf3-89d0-8fedab9cc8dd",
+		"name": "spam_filter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "depth1 spam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"content\": \"asdw https://goo.gl/88srfV\",\n  \"spam_domains\": [\n    \"pearsoncmg.com\"\n  ],\n  \"depth\": 1\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/spam-filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"spam-filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "depth2 spam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"content\": \"asdw https://goo.gl/88srfV\",\n  \"spam_domains\": [\n    \"support\"\n  ],\n  \"depth\": 2\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/spam-filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"spam-filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "depth3 spam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"content\": \"asdw https://goo.gl/88srfV\",\n  \"spam_domains\": [\n    \"pearson\"\n  ],\n  \"depth\": 3\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/spam-filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"spam-filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find from html element",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"content\": \"asdw https://goo.gl/88srfV\",\n  \"spam_domains\": [\n    \"accessibility\"\n  ],\n  \"depth\": 1\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/spam-filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"spam-filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "many addresses at content",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"content\": \"asdw https://goo.gl/88srfV http://bit.ly/silly\",\n  \"spam_domains\": [\n    \"pearsoncmg.com\"\n  ],\n  \"depth\": 1\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/spam-filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"spam-filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "depth1 nospam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"content\": \"asdw https://goo.gl/88srfV\",\n  \"spam_domains\": [\n    \"nospam\"\n  ],\n  \"depth\": 1\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/spam-filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"spam-filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "depth2 nospam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"content\": \"asdw https://goo.gl/88srfV\",\n  \"spam_domains\": [\n    \"nospam\"\n  ],\n  \"depth\": 2\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/spam-filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"spam-filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nospam many addresses and expired redirection",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"content\": \"asdw https://goo.gl/88srfV http://bit.ly/silly\",\n  \"spam_domains\": [\n    \"pass\", \"obvsy.com\"\n  ],\n  \"depth\": 1\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/spam-filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"spam-filter"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
